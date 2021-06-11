@@ -1,2 +1,2 @@
-let val = "hello";
-alert(val);
+import 'bootstrap/dist/css/bootstrap.min.css';
+
