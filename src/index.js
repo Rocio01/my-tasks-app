@@ -4,6 +4,7 @@ import './style.css';
 const taskForm = document.querySelector(".task-form");
 const tasksUl = document.querySelector(".container");
 const taskInput = document.querySelector(".task");
+const clearButton = document.querySelector(".clear-task-button");
 
 const loadEventListeners = () => {
 
@@ -25,14 +26,21 @@ const loadEventListeners = () => {
 
   tasksUl.addEventListener("click", (e) => {
     if(e.target.classList.contains("delete-task")) {
-      e.target.parentElement.remove();
-    }
-    
+      if(confirm("Are you sure")){
+        e.target.parentElement.remove();
+      }
+    }    
   })
 
-
-  
+  clearButton.addEventListener("click", () => {
+      while(tasksUl.firstChild){
+      tasksUl.removeChild(tasksUl.firstChild);
+    }
+    // tasksUl.innerHTML = "";
+  })  
 }
+
+
 
 loadEventListeners();
 
