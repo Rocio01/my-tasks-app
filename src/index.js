@@ -4,6 +4,7 @@ import './style.css';
 const taskForm = document.querySelector(".task-form");
 const tasksUl = document.querySelector(".container");
 const taskInput = document.querySelector(".task");
+const filter = document.querySelector(".filter-task")
 const clearButton = document.querySelector(".clear-task-button");
 
 const loadEventListeners = () => {
@@ -39,6 +40,21 @@ const loadEventListeners = () => {
     // tasksUl.innerHTML = "";
   })  
 }
+
+filter.addEventListener("keyup", (e) => {
+  const text = e.target.value.toUpperCase();
+  
+  document.querySelectorAll(".li-task").forEach((li) => {
+    const input = li.firstChild.textContent;
+    if (input.toUpperCase().indexOf(text) !== -1 ){
+      li.style.display = "block";
+    }
+    else {
+      li.style.display = "none";
+    }
+  })
+ 
+})
 
 
 
