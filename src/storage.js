@@ -30,4 +30,21 @@ const getTasksLs = () => {
        tasksUl.appendChild(li);       
     });
 }
-export {addTaskLs, getTasksLs}
+const removeTaskLs = (taskItem) => {
+  let tasks;
+  if(localStorage.getItem("tasks") === null){
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  } 
+  tasks.forEach((task, index) => {
+    if(taskItem.textContent == task +"Delete" ){
+      tasks.splice(index, 1);
+    }
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+ 
+}
+
+export {addTaskLs, getTasksLs, removeTaskLs}
