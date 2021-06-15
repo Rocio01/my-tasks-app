@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import { addTaskLs, getTasksLs } from './storage';
 
 const taskForm = document.querySelector(".task-form");
 const tasksUl = document.querySelector(".container");
@@ -8,6 +9,8 @@ const filter = document.querySelector(".filter-task")
 const clearButton = document.querySelector(".clear-task-button");
 
 const loadEventListeners = () => {
+ 
+  window.addEventListener('DOMContentLoaded', getTasksLs);
 
   taskForm.addEventListener("submit", (e) =>{
     e.preventDefault();
@@ -20,6 +23,7 @@ const loadEventListeners = () => {
     link.innerHTML = 'Delete';
     li.appendChild(link);
     tasksUl.appendChild(li);
+    addTaskLs(taskInput.value);
     taskInput.value = "";
      
   });
