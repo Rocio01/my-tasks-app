@@ -47,4 +47,8 @@ const removeTaskLs = (taskItem) => {
  
 }
 
-export {addTaskLs, getTasksLs, removeTaskLs}
+const clearTaskLs = () => {
+  localStorage.clear();
+}
+
+export {addTaskLs, getTasksLs, removeTaskLs, clearTaskLs}

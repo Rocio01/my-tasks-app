@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import { addTaskLs, getTasksLs, removeTaskLs } from './storage';
+import { addTaskLs, getTasksLs, removeTaskLs, clearTaskLs } from './storage';
 
 const taskForm = document.querySelector(".task-form");
 const tasksUl = document.querySelector(".container");
@@ -44,6 +44,7 @@ const loadEventListeners = () => {
       tasksUl.removeChild(tasksUl.firstChild);
     }
     // tasksUl.innerHTML = "";
+    clearTaskLs();
   })  
 }
 
