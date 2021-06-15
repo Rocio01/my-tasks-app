@@ -4,10 +4,18 @@
   box-sizing: border-box;
 }
 
+body {
+  color: aliceblue;
+}
 body, li, ul {
-  background-color: #e6ffe6;
+  background-color: rgb(24, 1, 27);
 }
 
 li {
   list-style: none;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(24, 1, 27);
 }
