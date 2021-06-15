@@ -7,20 +7,26 @@
   <title>My Tasks App</title>
 </head>
 <body>
+  
   <h1 class="text-center ">My Tasks App</h1>
-
-  <form class="input-group mb-3 p-1 task-form">
-    <input type="text" class="form-control task text-center" placeholder="Please add your Task" aria-describedby="basic-addon1" required>
+ <section >
+  <form class="input-group mb-2 p-3 task-form">
+    <input type="text" class="form-control task text-center " placeholder="Please add your Task" aria-describedby="basic-addon1" required>
     <button class="btn btn-success add-task-button" type="submit"> Add Task </button>
   </form>
-  <div class="input-group mb-3 p-5">
+  <div class="input-group mb-2 p-3">
     <input type="text" class="form-control task text-center filter-task" placeholder=" Filter Task" aria-describedby="basic-addon1">
     
   </div>
+
+ </section>
+
   <section class="d-flex justify-content-center">
+     
       <div class="card " style="width: 18rem;">
+        <h2> My tasks </h2>
         <ul class="list-group list-group-flush container"></ul>
-        <button class="btn btn-success clear-task-button"  > Clear Tasks </button>
+        <button class="btn btn-warning clear-task-button"  > Clear Tasks </button>
       </div>
   </section>
   <script src="main.js"></script>
