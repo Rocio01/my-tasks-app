@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tasks App</title>
+</head>
+<body>
+  
+  <h1 class="text-center ">My Tasks App</h1>
+ <div class="col-md-6 mx-auto">
+  <form class="input-group mb-2 p-3 task-form">
+    <input type="text" class="form-control task text-center " placeholder="Please add your Task" aria-describedby="basic-addon1" required>
+    <button class="btn btn-success add-task-button" type="submit"> Add Task </button>
+  </form>
+  <div class="input-group mb-2 p-3">
+    <input type="text" class="form-control task text-center filter-task" placeholder=" Filter Task" aria-describedby="basic-addon1">
+    
+  </div>
+ </div>
+
+
+ 
+
+  <section class="d-flex justify-content-center">
+     
+      <div class="card " style="width: 18rem;">
+        <h2> My tasks </h2>
+        <ul class="list-group list-group-flush container"></ul>
+        <button class="btn btn-warning clear-task-button"  > Delete all Tasks </button>
+      </div>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
